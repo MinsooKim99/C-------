@@ -1,3 +1,11 @@
+/* PART2 Chapter2 연습문제 1
+그림과 같이 배열을 90도 회전시키세요.
+1   2   3   4
+5   6   7   8   =>  5 1
+                    6 2
+                    7 3
+                    8 4
+*/
 #include <stdio.h>
 #define ROW_LEN 4
 #define COL_LEN 2
@@ -18,7 +26,6 @@ int main(){
         array2[i][0] = array2[i][1];
         array2[i][1] = temp;
     }
-
     printf("\n");
 
     for(i=0;i<COL_LEN;i++){
@@ -26,9 +33,7 @@ int main(){
             printf("%d ",array1[i][j]);
         }
         printf("\n");
-
     }
-
     printf("\n");
 
     for(i=0;i<ROW_LEN;i++){
@@ -38,6 +43,5 @@ int main(){
         printf("\n");
     }
 
-    
     return 0;
 }

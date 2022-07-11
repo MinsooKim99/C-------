@@ -1,9 +1,16 @@
+/* PART2 Chapter5 연습문제 6
+입력 값 두 개를 받아서 이를 더하고, 빼고, 곱하고, 나누는 사칙연산 함수들을 다음과 같은 형태로 구현하세요.
+void *add(int i, int j);
+void *subtract(int i, int j);
+void *multiply(int i, int j);
+void *divide(int i, int j);
+*/
 #include <stdio.h>
 
 void *add(int i, int j);
 void *subtract(int i, int j);
 void *multiply(int i, int j);
-void *divide(double i, double j);
+void *divide(int i, int j);
 
 int main () 
 {
@@ -73,14 +80,14 @@ void *multiply(int i, int j) {
 	return p;
 }
 
-void *divide(double i, double j) {
+void *divide(int i, int j) {
 	
 	void *p;
 	static double result;
 
 	p = &result;
 
-	result = i / j;
+	result = (double)i / j;
 
 	return p;
 }

@@ -1,3 +1,8 @@
+/* PART1 Chapter9 연습문제 6
+두 정수를 입력받아 덧셈을 하는 함수 Add()와 연산을 몇 번 수행했는지 세는 Count()
+함수를 작성하세요. 단, 총 연산은 100번으로 제한하며 두 정수 모두 0을 입력하면 종료
+합니다. 결과를 다음과 같이 출력하는 프로그램을 작성하세요. 정적 변수를 이용하세요.
+*/
 #include <stdio.h>
 
 int Add(int, int);
@@ -15,7 +20,7 @@ int main(void) {
       Count();
     }
     else{
-      printf("총 연산 수: %d", i);
+      printf("총 연산 수: %d\n", i);
       return 0;
     }
   }  

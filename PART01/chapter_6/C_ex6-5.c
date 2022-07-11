@@ -18,6 +18,8 @@ int main(){
 */
 #include <stdio.h>
 int main(){
+    // 문제점: 실수를 int형 데이터에 저장하려고 해서 데이터 손실 발생
+    // 해결방안: 나눗셈에서 데이터 손실이 많이 일어나므로 변수를 double로 선언한다.
     double result;
     double input1;
     double input2;

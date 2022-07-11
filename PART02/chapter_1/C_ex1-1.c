@@ -1,3 +1,8 @@
+/* PART2 Chapter1 연습문제 1
+그림과 같이 배열의 요소를 복사하세요.
+A B C ㅁㅁㅁ
+A B C C B A
+*/
 #include <stdio.h>
 int main(){
     int i;
