@@ -12,7 +12,7 @@ int main(){
     scanf("%d",&y);
 
     if(x == y){
-        printf("같다 \n");
+        printf("같음 \n");
     }
     else{
         printf("Smaller Number: %d \n",x>y ? y : x);

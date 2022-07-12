@@ -1,23 +1,26 @@
 /* PART3 Chapter1 연습문제 6
-다음 코드를 분석해서 그 결과를 그림으로 작성하고 출력 결과를 예측하세요.
+다음 그림을 분석해서 그 결과를 코드로 작성하세요.
 */
 #include <stdio.h>
-struct node{
-    int data;
-    struct node* link;
+struct student{
+    int no;
+    char name[20];
+    double total;
 };
 int main(){
-    struct node n1, n2, n3;
+    struct student stu = {20101323,"Park",160};
+    struct student* p = NULL;
+    struct student** pp = NULL;
+    p = &stu;
+    pp = &p;
 
-    n1.data = 10;
-    n1.link = &n2;
-    n2.data = 20;
-    n2.link = &n1;
-    n3.data = 30;
-    n3.link = &n3;
-
-    printf("%d %d %d \n",n1.data,n2.data,n3.data);
-    printf("%d %d %d \n",n2.link->data,n1.link->data,n3.link->data);
+    printf("%d %s %lf\n",stu.no,stu.name,stu.total);
+    
+    printf("%d %s %lf\n",(*p).no,(*p).name,(*p).total);
+    printf("%d %s %lf\n",p->no,p->name,p->total);
+    
+    printf("%d %s %lf\n",(**pp).no,(**pp).name,(**pp).total);
+    printf("%d %s %lf\n",(*pp)->no,(*pp)->name,(*pp)->total);
 
     return 0;
 }

@@ -13,7 +13,8 @@ int main(){
     printf("input z: ");
     scanf("%d",&z);
 
-    printf("(x+y)*(x+z)/(y%z) = %d \n",(x+y)*(x+z)/(y%z));
+    printf("(x+y)*(x+z)/(y%%z) = %d \n",(x+y)*(x+z)/(y%z));
+    // %출력은 %%로
 
     return 0;
 }
