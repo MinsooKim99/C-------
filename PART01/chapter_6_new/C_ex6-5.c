@@ -15,20 +15,25 @@ int main(){
 
     return 0;
 }
+변형 - double형을 int형으로 형변환할때 손실되는 데이터 크기 구하기
 */
 #include <stdio.h>
 int main(){
     // 문제점: 실수를 int형 데이터에 저장하려고 해서 데이터 손실 발생
     // 해결방안: 나눗셈에서 데이터 손실이 많이 일어나므로 변수를 double로 선언한다.
-    double result;
+    int result_int;
+    double result_double;
     double input1;
     double input2;
 
     printf("input 2 numbers = ");
     scanf("%lf %lf",&input1, &input2);
 
-    result = input1 / input2;
-    printf("나눗셈 결과 = %.2lf \n",result);
+    result_double = input1 / input2;
+    result_int = input1 / input2;
+    printf("실수 나눗셈 결과 = %.2lf \n",result_double);
+    printf("정수 나눗셈 결과 = %d \n",result_int);
+    printf("손실된 데이터 : %.2lf \n",result_double-result_int);
 
     return 0;
 }

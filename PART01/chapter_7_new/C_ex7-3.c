@@ -5,19 +5,22 @@
  *****
   ***
    *
+변형 - 상수로 일반화 하기
 */
 #include <stdio.h>
+#define LEN 50
+#define SIZE 2*LEN-1
 int main(){
     int n, i=0, j;
 
     // i: 줄
     // j: * 출력
-    for(;i<5;i++){          // 5줄이니 5번반복
+    for(;i<LEN;i++){        // 5줄이니 5번반복
         for(j=0;j<i;j++){  
             printf(" ");    // i만큼 공백 주기
         }
-        for(j=0;j<7-(2*i);j++){
-            printf("*");    // 7-(2*i)만큼 * 출력
+        for(j=0;j<SIZE-(2*i);j++){
+            printf("*");    // SIZE-(2*i)만큼 * 출력
         }
         printf("\n");       // 한줄 끝내고 개행
     }

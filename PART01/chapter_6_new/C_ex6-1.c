@@ -14,6 +14,7 @@ int main(){
 실행결과
 실수를 입력하세요 : 34.34
 당신이 입력한 수는 34입니다.
+변형 - 자릿수 구분해서 출력하기
 */
 #include <stdio.h>
 int main(){
@@ -21,7 +22,14 @@ int main(){
     printf("실수를 입력하세요 : ");
     scanf("%lf",&num);
 
-    printf("당신이 입력한 수는 %lf입니다.",num);
+    printf("당신이 입력한 수는 %lf입니다.\n",num);
+    printf("당신이 입력한 수는 %.lf입니다.\n",num);
+    printf("당신이 입력한 수는 %.1lf입니다.\n",num);
+    printf("당신이 입력한 수는 %.2lf입니다.\n",num);
+    printf("당신이 입력한 수는 %.3lf입니다.\n",num);
+    printf("당신이 입력한 수는 %.4lf입니다.\n",num);
+    printf("당신이 입력한 수는 %.5lf입니다.\n",num);
+    printf("당신이 입력한 수는 %.6lf입니다.\n",num);
 
     return 0;
 }
