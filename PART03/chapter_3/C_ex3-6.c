@@ -1,3 +1,6 @@
+/* PART3 Chapter3 연습문제 6
+4번 문제에서 번호를 입력하면 이름과 총점이 검색될 수 있도록 프로그램을 수정하세요.
+*/
 #include <stdio.h>
 
 int main(){

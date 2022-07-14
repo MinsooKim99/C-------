@@ -6,6 +6,7 @@
 
 두 개의 정수를 입력하세요 : 5 5
 두 수는 같습니다.
+변형 - 삼항연산자로 조건문을 한줄에 표현하기
 */
 #include <stdio.h>
 int main(){
@@ -14,11 +15,13 @@ int main(){
     scanf("%d",&num1);
     scanf("%d",&num2);
 
-    if(num1 == num2){
-        printf("두 수는 같습니다.\n");
-    }
-    else{
-        printf("더 큰 수는 %d\n",num1>num2?num1:num2);
-    }
+    num1==num2?printf("두 수는 같습니다.\n"):printf("큰 수는 %d입니다.\n",num1>num2?num1:num2);
+    // if(num1 == num2){
+    //     printf("두 수는 같습니다.\n");
+    // }
+    // else{
+    //     printf("더 큰 수는 %d\n",num1>num2?num1:num2);
+    // }
+
     return 0;
 }

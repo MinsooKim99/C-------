@@ -1,3 +1,6 @@
+/* PART3 Chapter3 연습문제 5
+4번 문제에서 번호를 입력하면 이름과 총점이 검색될 수 있도록 프로그램을 수정하세요.
+*/
 #include <stdio.h>
 
 int main(){
@@ -22,9 +25,14 @@ int main(){
     fclose(stream2);
     stream2 = fopen("score_total.txt","r");
     
-    printf("번호 검색(0:exit): ");
-    scanf("%d",&input_num);
-    while(input_num != 0){
+    while(1){
+        fseek(stream2,0,SEEK_SET);
+        printf("번호 검색(0:exit): ");
+        scanf("%d",&input_num);
+
+        if(input_num == 0)
+            break;
+
         for(i=0;;i++){
             ret = fscanf(stream2,"%d %*c %s %*s %lf",&num,name,&total);
             if(ret == -1){
@@ -38,9 +46,6 @@ int main(){
             else
                 continue;
         }
-        fseek(stream2,0,SEEK_SET);
-        printf("번호 검색(0:exit): ");
-        scanf("%d",&input_num);
     }
 
     fclose(stream1);
