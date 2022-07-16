@@ -9,7 +9,7 @@
 */
 #include <stdio.h>
 #include <stdlib.h>
-#define LEN 100
+#define LEN 5
 #define CENTER LEN/2
 
 int main(){

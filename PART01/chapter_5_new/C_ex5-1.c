@@ -14,7 +14,7 @@ int main(){
     printf("input z: ");
     scanf("%d",&z);
     
-    printf("input your answer: ");
+    printf("question: (x+y)*(x+z)/(y%%z)\ninput your answer: ");
     scanf("%d",&input_num);
 
     result = (x+y)*(x+z)/(y%z);

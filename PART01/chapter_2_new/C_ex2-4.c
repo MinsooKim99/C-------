@@ -31,7 +31,6 @@ int main(){
         if(r <= 0){
             break;
         }
-
         printf("원의 넓이는 %lf입니다.\n",r*r*PI);
     }
     

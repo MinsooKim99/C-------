@@ -37,8 +37,8 @@ void main(){
 }
 
 void swap(int* p1, int* p2){
-    int pyellow; // 빈컵
-    pyellow = *p1;
+    int yellow; // 빈컵
+    yellow = *p1;
     *p1 = *p2;
-    *p2 = pyellow;
+    *p2 = yellow;
 }

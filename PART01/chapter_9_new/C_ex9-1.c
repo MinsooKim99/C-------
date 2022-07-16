@@ -4,10 +4,11 @@
 실행 결과
 정수를 입력하세요 : -43
 절댓값은 : 43입니다.
+변형 - stdlib.h에 존재하는 abs()함수 사용하기
 */
 #include <stdio.h>
-
-int abs(int);
+#include <stdlib.h>
+// int abs(int);
 int main(){
     int input_num, abs_num;
 
@@ -19,6 +20,6 @@ int main(){
     return 0;
     
 }
-int abs(int num){
-    return num<0 ? (-num) : num;
-}
+// int abs(int num){
+//     return num<0 ? (-num) : num;
+// }

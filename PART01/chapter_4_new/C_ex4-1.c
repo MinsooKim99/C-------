@@ -14,7 +14,7 @@ int main(){
 
 int main(){
     
-    printf("%s %.2lf \n","10.00 + 20.00 =",(double)10 + (double)20);
+    printf("%s %.2lf \n","10.00 + 20.00 =",(double)10 + 20);
     
     return 0;
 }

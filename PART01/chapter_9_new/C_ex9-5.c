@@ -7,6 +7,7 @@ INTEGER SQUARE  CUBE    QUARTIC QUINTIC
 1       1       1       1       1
 2       4       8       16      32
 3       9       27      81      243
+변형 - 다음 결과를 파일에 저장하기
 */
 #include <stdio.h>
 int square(int);
@@ -15,12 +16,19 @@ int quartic(int);
 int quintic(int);
 int main(){
     int a=1,b=2,c=3;
+    FILE* stream = fopen("square.txt","w");
 
     printf("INTEGER\tSQUARE\tCUBE\tQUARTIC\tQUINTIC\n");
     printf("%d\t%d\t%d\t%d\t%d\n",a,square(a),cube(a),quartic(a),quintic(a));
     printf("%d\t%d\t%d\t%d\t%d\n",b,square(b),cube(b),quartic(b),quintic(b));
     printf("%d\t%d\t%d\t%d\t%d\n",c,square(c),cube(c),quartic(c),quintic(c));
 
+    fprintf(stream,"INTEGER\tSQUARE\tCUBE\tQUARTIC\tQUINTIC\n");
+    fprintf(stream,"%d\t\t%d\t\t%d\t\t%d\t\t%d\n",a,square(a),cube(a),quartic(a),quintic(a));
+    fprintf(stream,"%d\t\t%d\t\t%d\t\t%d\t\t%d\n",b,square(b),cube(b),quartic(b),quintic(b));
+    fprintf(stream,"%d\t\t%d\t\t%d\t\t%d\t\t%d\n",c,square(c),cube(c),quartic(c),quintic(c));
+
+    fclose(stream);
     return 0;
     
 }

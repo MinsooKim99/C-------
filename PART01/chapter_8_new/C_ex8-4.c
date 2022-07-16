@@ -6,17 +6,21 @@
 #include <stdio.h>
 int main(){
     int i,j;
-    for(i=0;i<100;i++){
-        for(j=0;j<i;j++){
-            
+    int is_prime = 1;
+    for(i=2;i<100;i++){
+        is_prime = 1;
+        for(j=2;j<i;j++){
+            if(i%j == 0){
+                is_prime = 0;
+                break;
+            }
         }
-        if((i+1)%2 == 1){
-            
+        if(is_prime){
+            printf("%d ",i);
         }
         else
             continue;
     }
-
     printf("\n");
     return 0;
 }

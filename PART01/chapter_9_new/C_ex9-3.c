@@ -7,6 +7,7 @@ a + b = 9
 a - b = -3
 a * b = 18
 a / b = 0.500000
+변형 - a의 b승도 출력하기
 */
 // 문제에 주어진 코드
 #include <stdio.h>
@@ -14,6 +15,7 @@ int plus(int i, int j);
 int minus(int i, int j);
 int multiply(int i, int j);
 double divide(int i, int j);
+int square(int i, int j);
 int main(){
     int a, b;
     int result;
@@ -30,6 +32,8 @@ int main(){
     printf("a * b = %d \n",result);
     result2 = divide(a,b);
     printf("a / b = %lf \n",result2);
+    result = square(a,b);
+    printf("a ^ b = %d \n",result);
     
     return 0;   
 }
@@ -51,4 +55,11 @@ double divide(int i, int j){
     else{
         return 0;
     }
+}
+int square(int i, int j){
+    int result = 1;
+    for(int k=0;k<j;k++){
+        result *= i;
+    }
+    return result;
 }
