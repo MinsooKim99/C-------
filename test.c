@@ -1,7 +1,13 @@
 #include <stdio.h>
-#define ADD(a,b) #a "+" #b
-int main(){
+#include <string.h>
+#include <ctype.h>
+int main()
+{
+   int i;
+   while(1){
+      scanf(" %d",&i);
+      printf("%d\n",i);
+   }
 
-    printf("%s",ADD(1,2));
-    return 0;
+   return 0;
 }
