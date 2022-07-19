@@ -9,8 +9,8 @@ int main(){
     printf("%x %x \n",&a,&b);               // a와 b의 주소
     printf("%x %x \n",array[0],array[1]);   // array[0](a의 주소), array[1](b의 주소)
     
-    printf("%x %x \n",*&a,*&b);             // a와 b의 주소의 값(a와 b의 값)
-    printf("%x %x \n",*array[0],*array[1]); // array[0]의 값(a의 값), array[1]의 값(b의 값)
+    printf("%d %d \n",*&a,*&b);             // a와 b의 주소의 값(a와 b의 값)
+    printf("%d %d \n",*array[0],*array[1]); // array[0]의 값(a의 값), array[1]의 값(b의 값)
 
 
     return 0;
