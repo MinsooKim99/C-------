@@ -1,13 +1,19 @@
 #include <stdio.h>
-#include <string.h>
-#include <ctype.h>
 int main()
 {
-   int i;
-   while(1){
-      scanf(" %d",&i);
-      printf("%d\n",i);
-   }
+   int*** ip3 = NULL;
+   int** ip2 = NULL;
+   int* ip1 = NULL;
+   int num1 = 10;
+
+   printf("%d %x %x %x \n", num1, &ip1, &ip2, &ip3);
+
+   ip1 = &num1;
+   ip2 = &ip1;
+   ip3 = &ip2;
+
+   printf("%d %x %x %x", num1, ip1, ip2, ip3);
 
    return 0;
+
 }

@@ -13,6 +13,7 @@ int main(){
     ip3 = &ip2;
 
     printf("%d %d %d %d",num1,*ip1,**ip2,***ip3);
+    printf("%x %x %x %x",&num1,&ip1,&ip2,&ip3);
     
     return 0;
 }
