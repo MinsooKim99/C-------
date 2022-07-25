@@ -1,13 +1,13 @@
 /* PART3 Chapter2 연습문제 2
 사용자로부터 최대 10개의 단어를 입력받아 정렬하는 프로그램을 작성하세요.
 사전식 순서로 작은 단어가 앞에 와야 합니다. 단, 각각의 단어는 15글자를 넘지 않는다고 가정합니다.
+변형 - 길이순으로 정렬하기
 */
 #include <stdio.h>
 #include <string.h>
 
 int main(){
-	char /*input_str[10][15],*/ temp[15];
-	char input_str[10][15] = {{"zebra"},{"banana"},{"conda"},{"vscode"},{"what"},{"the"},{"fuck"},{"apple"},{"are"},{"you"}};
+	char input_str[10][15], temp[15];
 	int i=0, j=0, max;
 
 	printf("입력을 종료하려면 그냥 엔터를 누르세요.\n");
@@ -25,10 +25,11 @@ int main(){
 		strcpy(input_str[i], temp);
 	}
 
-	//정렬
+	// 버블 정렬
 	for(i=max; i>=0; i--){
 		for(j=max; j>i; j--){
-			if((strcmp(input_str[i], input_str[j]) > 0) && (strlen(input_str[i]) != 0) && (strlen(input_str[j]) != 0)){
+			// if((strcmp(input_str[i], input_str[j]) > 0) && (strlen(input_str[i]) != 0) && (strlen(input_str[j]) != 0)){
+			if((strlen(input_str[i]) > strlen(input_str[j])) && (strlen(input_str[i]) != 0) && (strlen(input_str[j]) != 0)){
 				strcpy(temp, input_str[i]);
 				strcpy(input_str[i], input_str[j]);
 				strcpy(input_str[j], temp);
