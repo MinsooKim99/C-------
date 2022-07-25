@@ -6,8 +6,7 @@
 #include <string.h>
 
 int main(){
-	char /*input_str[10][15],*/ temp[15];
-	char input_str[10][15] = {{"zebra"},{"banana"},{"conda"},{"vscode"},{"what"},{"the"},{"fuck"},{"apple"},{"are"},{"you"}};
+	char input_str[10][15], temp[15];
 	int i=0, j=0, max;
 
 	printf("입력을 종료하려면 그냥 엔터를 누르세요.\n");
